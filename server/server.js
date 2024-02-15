@@ -12,6 +12,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
+  persistedQueries: false,
 });
 
 const startApolloServer = async () => {
@@ -39,3 +40,4 @@ const startApolloServer = async () => {
 };
 
 startApolloServer();
+
